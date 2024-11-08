@@ -30,9 +30,9 @@ function App() {
             let params = { page: currentPage, limit: ticketsPerPage };
 
             if (!isNaN(query) && query.trim() !== '' && parseInt(query) > 0) {
-                response = await axios.get(`http://localhost:3000/tickets/search/${query}`, { params });
+                response = await axios.get(`https://backend-zendesk.vercel.app/tickets/search/${query}`, { params });
             } else if (query.trim() !== '') {
-                response = await axios.get(`http://localhost:3000/tickets/search`, {
+                response = await axios.get(`https://backend-zendesk.vercel.app/tickets/search`, {
                     params: { query, ...params }
                 });
             } else {
