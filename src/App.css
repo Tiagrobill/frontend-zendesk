@@ -1,0 +1,222 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  background: url('image.png') no-repeat center center fixed;
+  background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+/* Caixa de busca */
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-box input:focus {
+  border-color: #28a745;
+}
+
+.search-box button {
+  width: 85%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #218838;
+}
+
+/* Estado de loading */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Erro ou resultados não encontrados */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Tickets */
+.ticket {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ticket p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Imagens com efeito de zoom */
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+/* Botão de download */
+.download-button {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.download-button:hover {
+  background-color: #218838;
+}
+
+/* Links */
+a {
+  color: #28a745;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Paginação */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #218838;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-box input,
+  .search-box button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+.reset-button {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #ec971f;
+}
+
+.footer {
+  background-color: #f0f0f0; /* Fundo claro */
+  color: #333; /* Texto escuro para boa legibilidade */
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o rodapé */
+  position: relative;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
