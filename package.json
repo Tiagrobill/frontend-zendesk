@@ -35,7 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://backend-zendesk-git-main-ti-agrobills-projects.vercel.app"
-
+  }
 }
