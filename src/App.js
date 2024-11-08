@@ -12,13 +12,14 @@ function App() {
     const [loading, setLoading] = useState(false); // Estado de loading
     const [currentTime, setCurrentTime] = useState(new Date()); // Hora atual
 
+    const baseUrl = process.env.REACT_APP_API_URL; // URL da API a partir da variável de ambiente
+
     // Atualiza a hora a cada segundo
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTime(new Date());
         }, 1000);
 
-        // Limpa o intervalo quando o componente é desmontado
         return () => clearInterval(interval);
     }, []);
 
@@ -28,9 +29,6 @@ function App() {
         try {
             let response;
             let params = { page: currentPage, limit: ticketsPerPage };
-
-            // URL do back-end na Vercel
-            const baseUrl = 'https://backend-zendesk-git-main-ti-agrobills-projects.vercel.app';
 
             if (!isNaN(query) && query.trim() !== '' && parseInt(query) > 0) {
                 response = await axios.get(`${baseUrl}/tickets/search/${query}`, { params });
@@ -219,6 +217,7 @@ function App() {
                 <p>Hora atual: {formatTime(currentTime)}</p>
             </footer>
         </div>
+
     );
 }
 
